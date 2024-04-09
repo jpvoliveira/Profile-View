@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+body {
+    padding: 0px 20px;
+}
+
+.card_repo:hover{
+    background-color: #F7F8F9;
+    cursor: pointer;
+}
+
+.topicos_importantes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}

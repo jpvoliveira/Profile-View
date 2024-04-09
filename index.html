@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Pessoal</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Joao Pedro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pessoas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contratos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="perfil mt-4">
+        <h3>Perfil</h3>
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <img id="user_imagem" alt="imagem usuario" class="col-lg-3 col-md-6">
+                <div class="col-lg-9 col-md-6">
+                    <h4 class="text-primary" id="user_name"></h4>
+                    <p id="user_informacoes"></p>
+                    <div class="d-flex flex-column justify-content-between flex-lg-row">
+                        <div>
+                            <p><strong>Location: </strong><span id="user_localizacao"></span></p>
+                            <p class="text-wrap"><strong>Site: </strong><a href="https://www.linkedin.com/in/joaopedrovitordeoliveira" target="_blank" id="user_site"></a></p>
+                        </div>
+                        <span style="font-size: 24px">
+                            <i class="bi bi-person-fill bi-4x text-primary"></i>
+                            <span><strong id="user_conexoes"></strong></span>
+                        </span>
+                    </div>
+                    <div class="perfil_redes_sociais">
+                        <span class="d-flex gap-4" style="font-size: 28px;">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="repositorios mt-4">
+        <h3>Repositórios (<span id="user_numero_repos"></span>)</h3>
+        <hr>
+        <div class="container-fluid">
+            <div class="row gx-4" id="repositorios_destaque">
+            </div>
+        </div>
+    </section>
+    <section class="conteudo_sugerido mt-4">
+        <h3>Conteúdo sugerido</h3>
+        <hr>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: 400px;">
+                <img src="https://source.unsplash.com/random/800x400?javascript" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
+              </div>
+              <div class="carousel-item" style="height: 400px;">
+                <img src="https://source.unsplash.com/random/800x400?code" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
+              </div>
+              <div class="carousel-item" style="height: 400px;">
+                <img src="https://source.unsplash.com/random/1280x400?java_code" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <section class="colegas_trabalho mt-4">
+        <h3>Colegas de trabalho</h3>
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="text-center col-md-3 col-sm-6">
+                    <img src="./assets/img/pessoa1.jpg" class="rounded" alt="..." style="height: 200px; width: 200px;">
+                    <p class="text-primary"><strong>Fulano da Silva</strong></p>
+                </div>
+                <div class="text-center col-md-3 col-sm-6">
+                    <img src="./assets/img/pessoa2.jpg" class="rounded" alt="..." style="height: 200px; width: 200px;">
+                    <p class="text-primary"><strong>Ciclano da Silva</strong></p>
+                </div>
+                <div class="text-center col-md-3 col-sm-6">
+                    <img src="./assets/img/pessoa3.jpg" class="rounded" alt="..." style="height: 200px; width: 200px;">
+                    <p class="text-primary"><strong>Beltrano da Silva</strong></p>
+                </div>
+                <div class="text-center col-md-3 col-sm-6">
+                    <img src="./assets/img/pessoa4.jpg" class="rounded" alt="..." style="height: 200px; width: 200px;">
+                    <p class="text-primary"><strong>Deltrano da Silva</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-light">
+        <div class="container text-center">
+          <span class="text-muted">© 2024 João Pedro Vitor de Oliveira. Todos os direitos reservados.</span>
+        </div>
+      </footer>
+    <script src="./js/user.js"></script>
+</body>
+</html>

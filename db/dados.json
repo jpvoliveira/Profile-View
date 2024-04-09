@@ -1,0 +1,75 @@
+{
+    "name": "Joao Pedro Vitor de Oliveira",
+    "imagem": "https://media.licdn.com/dms/image/D4D03AQGEnIFaeJr1lA/profile-displayphoto-shrink_800_800/0/1687286485687?e=1718236800&v=beta&t=XFGE_UhBbae9zRMIrlRTsOCzxWGUCYtAgUEyPb3MY3w",
+    "informacoes": "Entusiasta de tecnologia desde sempre, trilhei minha jornada até me tornar um desenvolvedor fullstack apaixonado por transformar ideias em soluções inovadoras. Comprometido com o aprimoramento contínuo, estou pronto para enfrentar desafios e impulsionar projetos com minha expertise técnica e paixão pela inovação.",
+    "localizacao": "Belo Horizonte, MG, Brazil",
+    "site": "www.linkedin.com/in/joaopedrovitordeoliveira",
+    "conexoes": "200",
+    "redesSociais": {
+        "facebook": "",
+        "twitter": "",
+        "instagram": ""
+    },
+    "repositorios": [
+        {
+            "id": "1",
+            "name": "EcoConnect",
+            "sinopse": "Conectando pessoas e organizações para iniciativas sustentáveis.",
+            "descricao": "EcoConnect é uma plataforma online que conecta indivíduos e organizações interessadas em iniciativas sustentáveis. Permitindo a troca de ideias, recursos e colaborações, o EcoConnect visa criar uma comunidade global comprometida com a preservação ambiental e ações ecológicas.",
+            "estrelas": "8",
+            "pessoas": "2",
+            "data": "2024-03-12",
+            "linguagens": "HTML, CSS, JavaScript",
+            "link": "www.ecoconnect.com.br",
+            "topicos": ["JavaScript", "Bootstrap", "Scrum"]
+        },
+        {
+            "id": "2",
+            "name": "HealthTrackr",
+            "sinopse": "Acompanhe e gerencie sua saúde de forma integrada.",
+            "descricao": "HealthTrackr é uma aplicação web que permite aos usuários acompanhar e gerenciar sua saúde e bem-estar de forma integrada. Com recursos de monitoramento de atividade física, dieta, sono e outras métricas de saúde, o HealthTrackr capacita os usuários a adotarem hábitos mais saudáveis e a monitorarem seu progresso ao longo do tempo.",
+            "estrelas": "4",
+            "pessoas": "0",
+            "data": "2024-04-01",
+            "linguagens": "Angular, Java, MongoDB",
+            "link": "www.healthtrackr.com.br",
+            "topicos": ["TypeScript", "SpringBoot", "GitHub", "NoSql", "DevOps", "Scrum"]
+        },
+        {
+            "id": "3",
+            "name": "SkillSwap",
+            "sinopse": "Plataforma para troca de habilidades entre membros da comunidade.",
+            "descricao": "SkillSwap é uma plataforma online que facilita a troca de habilidades entre membros da comunidade. Seja aprendendo um novo idioma, habilidades de programação, artesanato ou qualquer outra coisa, os usuários podem se conectar para ensinar e aprender uns com os outros, criando uma rede de aprendizado colaborativo e acessível.",
+            "estrelas": "0",
+            "pessoas": "3",
+            "data": "2023-12-05",
+            "linguagens": "React, Java",
+            "link": "www.skillswap.com.br",
+            "topicos": ["React", "Spring", "Git", "AzureDevOps", "Jira"]
+        },
+        {
+            "id": "4",
+            "name": "ArtisanMarket",
+            "sinopse": "Loja online para produtos feitos à mão por artesãos.",
+            "descricao": "ArtisanMarket é uma loja virtual dedicada a promover e vender produtos feitos à mão por artesãos e pequenos produtores. Oferecendo uma variedade de itens únicos, desde joias e acessórios até decoração para casa e itens de papelaria, o ArtisanMarket conecta consumidores conscientes com produtos feitos com cuidado e criatividade.",
+            "estrelas": "2",
+            "pessoas": "0",
+            "data": "2023-12-04",
+            "linguagens": "HTML, CSS, JavaScript, PostreSQL",
+            "link": "www.artisanmarket.com.br",
+            "topicos": ["TypeScript", "Express", "SQL", "Aws", "Scrum"]
+        },
+        {
+            "id": "5",
+            "name": "LearnHub",
+            "sinopse": "Plataforma de educação online com cursos variados.",
+            "descricao": "LearnHub é uma plataforma de educação online que oferece cursos em uma ampla variedade de tópicos, desde desenvolvimento de software e design gráfico até culinária e fotografia. Com instrutores especializados e recursos interativos, LearnHub permite que os alunos aprendam no seu próprio ritmo e alcancem seus objetivos educacionais de maneira flexível e acessível.",
+            "estrelas": "3",
+            "pessoas": "1",
+            "data": "2022-01-10",
+            "linguagens": "Angular, Python",
+            "link": "www.learnhub.com.br",
+            "topicos": ["TypeScript", "MVC", "Django", "DevOps", "Bamboo"]
+        }
+    ]
+}
