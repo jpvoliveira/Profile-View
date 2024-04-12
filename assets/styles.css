@@ -43,3 +43,21 @@ body {
     cursor: pointer;
     display: block !important;
 }
+
+@media (max-width: 766px) {
+    #user_imagem{
+        margin-bottom: 10px;
+    }
+
+    .carousel-item h4{
+        display: block !important;
+    }
+
+    .carousel-item div{
+        display: block !important;
+    }
+
+    .carousel-item:hover img {
+        opacity: unset;
+    }
+}
