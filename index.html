@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <section class="perfil mt-4">
+    <section id="perfil" class="perfil mt-4">
         <h3>Perfil</h3>
         <hr>
         <div class="container-fluid">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section class="repositorios mt-4">
+    <section id="repositorios" class="repositorios mt-4">
         <h3>Repositórios (<span id="user_numero_repos"></span>)</h3>
         <hr>
         <div class="container-fluid">
@@ -69,25 +69,49 @@
             </div>
         </div>
     </section>
-    <section class="conteudo_sugerido mt-4">
+    <section id="conteudo_sugerido" class="conteudo_sugerido mt-4">
         <h3>Conteúdo sugerido</h3>
         <hr>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" style="height: 400px;">
-                <img src="https://source.unsplash.com/random/800x400?javascript" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
-              </div>
-              <div class="carousel-item" style="height: 400px;">
-                <img src="https://source.unsplash.com/random/800x400?code" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
-              </div>
-              <div class="carousel-item" style="height: 400px;">
-                <img src="https://source.unsplash.com/random/1280x400?java_code" class="d-block img-fluid w-100" alt="..." style="height: 400px;">
-              </div>
+                <div class="carousel-item active" style="height: 400px;">
+                    <img src="./assets/img/angular.png" alt="..." style="height: 400px; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="https://andrewrosario.medium.com/confira-as-grandes-novidades-do-angular-17-43a812beaa2d" target="_blank" >
+                            <h4>NOVIDADES ANGULAR 17</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: 400px;">
+                    <img src="./assets/img/react.png" alt="..." style="height: 400px; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank">
+                            <h4>COMO COMEÇAR NO REACT</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: 400px;">
+                    <img src="./assets/img/flutter.jpg" alt="..." style="height: 400px; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="https://medium.com/@maizalouise/5-dicas-de-flutter-que-todos-os-devs-devem-saber-1fe5e5bfad8d" target="_blank">
+                            <h4>5 DICAS DE FLUTTER</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: 400px;">
+                    <img src="./assets/img/springboot.jpg" alt="..." style="height: 400px; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="https://medium.com/@ruanvbl/como-iniciar-uma-api-rest-com-spring-boot-utilizando-o-spring-initializr-e7618e01613e" target="_blank">
+                            <h4>API REST COM SPRING BOOT</h4>
+                        </a>
+                    </div>
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -99,7 +123,7 @@
             </button>
           </div>
     </section>
-    <section class="colegas_trabalho mt-4">
+    <section id="colegas_trabalho" class="colegas_trabalho mt-4">
         <h3>Colegas de trabalho</h3>
         <hr>
         <div class="container-fluid">

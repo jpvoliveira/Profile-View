@@ -21,3 +21,25 @@ body {
     font-weight: bold;
     border-radius: 25px;
 }
+
+.carousel-item img {
+    transition: opacity 0.2s ease;
+}
+
+.carousel-item a {
+    all: unset;
+}
+
+.carousel-item:hover img {
+    opacity: 0.5;
+}
+
+.carousel-item h4{
+    display: none;
+}
+
+.carousel-item:hover h4{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    cursor: pointer;
+    display: block !important;
+}
