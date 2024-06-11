@@ -1,27 +1,43 @@
-fetch('../db/dados.json')
-  .then(response => response.json())
-  .then(data => {
+import {UserService} from "../../service/userService.js";
+
+const userService = new UserService();
+
+async function setupUserPage() {
+    const user = await userService.getUser();
+    createProfileComponent(user)
+    
+    const repositories = await userService.getUserRepositories();
+    repositories.forEach(repo => {
+        if (repo.description){
+            createRepositoryComponent(repo)
+        }
+    });
+    
+}
+
+function createProfileComponent(user){
     const nome = document.getElementById('user_name');
-    nome.innerText = data.name
+    nome.innerText = user.name
     const imagem = document.getElementById('user_imagem');
-    imagem.src = data.imagem
+    imagem.src = user.avatar_url;
     const informacoes = document.getElementById('user_informacoes');
-    informacoes.innerText = data.informacoes
+    informacoes.innerText = user.bio;
     const localizacao = document.getElementById('user_localizacao');
-    localizacao.innerText = data.localizacao
+    localizacao.innerText = user.location;
     const site = document.getElementById('user_site');
-    site.innerText = data.site
+    site.innerText = user.html_url
     const conexoes = document.getElementById('user_conexoes');
-    conexoes.innerText = data.conexoes
+    conexoes.innerText = user.followers
+    const numero_repos = document.getElementById('user_numero_repos');
+    numero_repos.innerText = user.public_repos;
+}
 
+function createRepositoryComponent(repo){
     const itemTopics = document.getElementById('repositorios_destaque');
-
-    let numberRepos = 0;
-    data.repositorios.forEach(repo => {
         var cardDiv = document.createElement("div");
         cardDiv.classList.add("card_repo", "col-md-3", "col-sm-6");
         cardDiv.onclick = function() {
-            window.location.href = 'repo.html?id='+repo.id;
+            window.location.href = 'repo.html?name='+repo.name;
         };
 
         var titleP = document.createElement("p");
@@ -32,7 +48,7 @@ fetch('../db/dados.json')
         cardDiv.appendChild(titleP);
 
         var descriptionPara = document.createElement("p");
-        var descriptionText = document.createTextNode(repo.sinopse);
+        var descriptionText = document.createTextNode(repo.description);
         descriptionPara.appendChild(descriptionText);
         cardDiv.appendChild(descriptionPara);
 
@@ -42,7 +58,7 @@ fetch('../db/dados.json')
         cardDiv.appendChild(statsSpan);
 
         var starSpan = document.createElement("span");
-        var starText = document.createTextNode(repo.estrelas);
+        var starText = document.createTextNode(repo.stargazers_count);
         var starIcon = document.createElement("i");
         starIcon.classList.add("bi", "bi-star-fill");
         starSpan.appendChild(starIcon);
@@ -50,7 +66,7 @@ fetch('../db/dados.json')
         statsSpan.appendChild(starSpan);
 
         var personSpan = document.createElement("span");
-        var personText = document.createTextNode(repo.pessoas);
+        var personText = document.createTextNode(repo.forks_count);
         var personIcon = document.createElement("i");
         personIcon.classList.add("bi", "bi-person-fill", "text-primary");
         personSpan.appendChild(personIcon);
@@ -58,9 +74,6 @@ fetch('../db/dados.json')
         statsSpan.appendChild(personSpan);
 
         itemTopics.appendChild(cardDiv);
-        numberRepos++
-    });
-    const numero_repos = document.getElementById('user_numero_repos');
-    numero_repos.innerText = numberRepos;
-  })
-  .catch(error => console.error('Erro ao carregar o arquivo JSON: ', error));
+}
+
+window.addEventListener("load", setupUserPage);

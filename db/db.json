@@ -1,0 +1,58 @@
+{
+    "content": [
+        {
+            "id": 1,
+            "title": "NOVIDADES ANGULAR 17",
+            "desription": "",
+            "image_url": "./assets/img/angular.png",
+            "content_url": "https://andrewrosario.medium.com/confira-as-grandes-novidades-do-angular-17-43a812beaa2d"
+        },
+        {
+            "id": 2,
+            "title": "COMO COMEÇAR NO REACT",
+            "desription": "",
+            "image_url": "./assets/img/react.png",
+            "content_url": "https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649"
+        },
+        {
+            "id": 3,
+            "title": "5 DICAS DE FLUTTER",
+            "desription": "",
+            "image_url": "../assets/img/flutter.jpg",
+            "content_url": "https://medium.com/@maizalouise/5-dicas-de-flutter-que-todos-os-devs-devem-saber-1fe5e5bfad8d"
+        },
+        {
+            "id": 4,
+            "title": "API REST COM SPRING BOOT",
+            "desription": "",
+            "image_url": "./assets/img/springboot.jpg",
+            "content_url": "https://medium.com/@ruanvbl/como-iniciar-uma-api-rest-com-spring-boot-utilizando-o-spring-initializr-e7618e01613e"
+        }
+    ],
+    "friends": [
+        {
+            "id": 1,
+            "image_url": "./assets/img/pessoa1.jpg",
+            "name": "Fulano da Silva",
+            "github_url": ""
+        },
+        {
+            "id": 2,
+            "image_url": "./assets/img/pessoa2.jpg",
+            "name": "Ciclano da Silva",
+            "github_url": ""
+        },
+        {
+            "id": 3,
+            "image_url": "./assets/img/pessoa3.jpg",
+            "name": "Beltrano da Silva",
+            "github_url": ""
+        },
+        {
+            "id": 4,
+            "image_url": "./assets/img/pessoa4.jpg",
+            "name": "Deltrano da Silva",
+            "github_url": ""
+        }
+    ]
+}
