@@ -1,34 +1,47 @@
-window.onload = function() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const item = urlParams.get('id');
+import {FriendService} from "../../service/friendService.js";
 
-    const itemTitle = document.getElementById('item-title');
-    const itemDescription = document.getElementById('item-description');
-    const itemDate = document.getElementById('item-date');
-    const itemLang = document.getElementById('item-lang');
-    const itemEstrelas = document.getElementById('item-estrelas');
-    const itemPessoas = document.getElementById('item-pessoas');
-    const itemLink = document.getElementById('item-link');
-    const itemTopics = document.getElementById('item-topics');
+const friendService = new FriendService();
 
-    fetch('../db/dados.json')
-        .then(response => response.json())
-        .then(data => {
-            const project = data.repositorios.filter(project => project.id === item)[0];
-            itemTitle.innerText = project.name;
-            itemDescription.innerText = project.descricao;
-            itemDate.innerText = project.data;
-            itemLang.innerText = project.linguagens;
-            itemEstrelas.innerText = project.estrelas;
-            itemPessoas.innerText = project.pessoas;
-            itemLink.innerText = project.link;
-            project.topicos.forEach(topico => {
-                const divTopico = document.createElement('div');
-                divTopico.classList.add('topicos_importantes', 'bg-primary', 'd-inline-block', 'py-1', 'px-3');
-                divTopico.textContent = topico;
-                itemTopics.appendChild(divTopico);
-            });
-        })
-        .catch(error => console.error('Erro ao carregar o arquivo JSON: ', error));
-};
+async function setupFriendSection() {
+    const friends = await friendService.getFriends();
+
+    friends.forEach(friend => {
+        createFriendComponent(friend)
+    });
+}
+
+function createFriendComponent(friend) {
+    const friendsSection = document.getElementById('friends_section');
+
+    const containerDiv = document.createElement('div');
+    containerDiv.classList.add('text-center', 'col-md-3', 'col-sm-6');
+
+    const link = document.createElement('a');
+    link.href = friend.linkedin_url;
+    link.target = '_blank';
+
+    const img = document.createElement('img');
+    img.src = friend.image_url;
+
+    img.classList.add('rounded');
+    img.alt = friend.name;
+    img.style.height = '200px';
+    img.style.width = '200px';
+
+    link.appendChild(img);
+
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('text-primary');
+
+    const strongText = document.createElement('strong');
+    strongText.textContent = friend.name;
+
+    paragraph.appendChild(strongText);
+
+    containerDiv.appendChild(link);
+    containerDiv.appendChild(paragraph);
+
+    friendsSection.appendChild(containerDiv);
+}
+
+window.addEventListener("load", setupFriendSection);

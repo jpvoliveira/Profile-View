@@ -34,46 +34,46 @@ function createProfileComponent(user){
 
 function createRepositoryComponent(repo){
     const itemTopics = document.getElementById('repositorios_destaque');
-        var cardDiv = document.createElement("div");
-        cardDiv.classList.add("card_repo", "col-md-3", "col-sm-6");
-        cardDiv.onclick = function() {
-            window.location.href = 'repo.html?name='+repo.name;
-        };
+    var cardDiv = document.createElement("div");
+    cardDiv.classList.add("card_repo", "col-md-3", "col-sm-6");
+    cardDiv.onclick = function() {
+        window.location.href = 'repo.html?name='+repo.name;
+    };
 
-        var titleP = document.createElement("p");
-        var titlePara = document.createElement("strong");
-        var titleText = document.createTextNode(repo.name);
-        titlePara.appendChild(titleText);
-        titleP.appendChild(titlePara);
-        cardDiv.appendChild(titleP);
+    var titleP = document.createElement("p");
+    var titlePara = document.createElement("strong");
+    var titleText = document.createTextNode(repo.name);
+    titlePara.appendChild(titleText);
+    titleP.appendChild(titlePara);
+    cardDiv.appendChild(titleP);
 
-        var descriptionPara = document.createElement("p");
-        var descriptionText = document.createTextNode(repo.description);
-        descriptionPara.appendChild(descriptionText);
-        cardDiv.appendChild(descriptionPara);
+    var descriptionPara = document.createElement("p");
+    var descriptionText = document.createTextNode(repo.description);
+    descriptionPara.appendChild(descriptionText);
+    cardDiv.appendChild(descriptionPara);
 
-        var statsSpan = document.createElement("span");
-        statsSpan.classList.add("d-flex", "gap-4");
-        statsSpan.style.fontSize = "28px";
-        cardDiv.appendChild(statsSpan);
+    var statsSpan = document.createElement("span");
+    statsSpan.classList.add("d-flex", "gap-4");
+    statsSpan.style.fontSize = "28px";
+    cardDiv.appendChild(statsSpan);
 
-        var starSpan = document.createElement("span");
-        var starText = document.createTextNode(repo.stargazers_count);
-        var starIcon = document.createElement("i");
-        starIcon.classList.add("bi", "bi-star-fill");
-        starSpan.appendChild(starIcon);
-        starSpan.appendChild(starText);
-        statsSpan.appendChild(starSpan);
+    var starSpan = document.createElement("span");
+    var starText = document.createTextNode(repo.stargazers_count);
+    var starIcon = document.createElement("i");
+    starIcon.classList.add("bi", "bi-star-fill");
+    starSpan.appendChild(starIcon);
+    starSpan.appendChild(starText);
+    statsSpan.appendChild(starSpan);
 
-        var personSpan = document.createElement("span");
-        var personText = document.createTextNode(repo.forks_count);
-        var personIcon = document.createElement("i");
-        personIcon.classList.add("bi", "bi-person-fill", "text-primary");
-        personSpan.appendChild(personIcon);
-        personSpan.appendChild(personText);
-        statsSpan.appendChild(personSpan);
+    var personSpan = document.createElement("span");
+    var personText = document.createTextNode(repo.forks_count);
+    var personIcon = document.createElement("i");
+    personIcon.classList.add("bi", "bi-person-fill", "text-primary");
+    personSpan.appendChild(personIcon);
+    personSpan.appendChild(personText);
+    statsSpan.appendChild(personSpan);
 
-        itemTopics.appendChild(cardDiv);
+    itemTopics.appendChild(cardDiv);
 }
 
 window.addEventListener("load", setupUserPage);
